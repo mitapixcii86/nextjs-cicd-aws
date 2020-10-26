@@ -12,4 +12,12 @@ output "hash" {
   description = "Docker image source hash"
   value       = data.external.hash.result["hash"]
 }
+output "registry_id" {
+  value       = aws_ecr_repository.repo.registry_id
+  description = "Registry ID where the repository was created"
+}
+output "ecs_alb_url" {
+  value = "http://${aws_alb.application_load_balancer.dns_name}/"
+}
+
 
