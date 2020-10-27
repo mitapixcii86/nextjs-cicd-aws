@@ -1,0 +1,35 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    project_dir : "./"
+  tasks:
+  - name: terraform init
+    command: "terraform init {{ project_dir }} "
+    register: init_result
+  - debug:
+        var: init_result.stdout_lines
+  
+  - name: terraform plan
+    terraform:
+      binary_path : "/usr/local/bin/terraform"
+      project_path: "{{ project_dir }}"
+      plan_file: "{{ project_dir }}/myplan.tfplan"
+      state: planned
+    register: plan_result
+
+  - debug:
+       var: plan_result.stdout_lines
+
+  - name: terraform apply
+    terraform:
+      binary_path : "/usr/local/bin/terraform"
+      project_path: "{{ project_dir }}"
+      state: present
+      plan_file: "{{ project_dir }}/myplan.tfplan"
+    register: apply_result
+
+  - debug:
+       var: apply_result.stdout_lines
