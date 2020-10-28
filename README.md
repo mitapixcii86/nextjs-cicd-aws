@@ -7,27 +7,28 @@ This project was bootstrapped with [Create Next App](https://github.com/segmenti
 ## Task 1
 
 Given this project deploy it to AWS in an automated and reproducible fashion. The website should be reachable from all over the world.
- >> Follow the instruction in the Getting started section
+ >> Follow the instruction in the Getting started section to run it from your local
 
 ## Task 2
 
 Restrict access to the site by using mechanisms that can be adapted programmatically.
->> Description in Access Management Section
+>> Description in Access Management Section for more details
 
 ## Task 3
 
 Deploy the site using at least 2 technology stacks. Make sure that both types of deployment can be reproduced in an automated fashion.
 
->> More details provided in the Getting started section
+○ More details provided in the Getting started section
 
 ## Task 4
 
 What issues can you identify in the given site? What types of improvements would you suggest?
 
->> Test cases missing : Would advice to have a test based development with a unit and integration setup that should be made mandatory to be executed in the deployment pipeline. Failure to pass any test cases should reject the deployment.
->> To many duplicate CSS styling and javascript : This impacts the performance and page loading time.
->> Minify css and javascript : This is the solution to the previous comment, minification removes unnecessary characters and reduces time, hence improving loading time.
->> Proper error handling is missing : As a more robust DevSecOps solution and proper logging, alerting and mechanism should be in place for a proactive error/incident management. 
+>> Few imporvement suggestions
+○ Test cases missing : Would advice to have a test based development with a unit and integration setup that should be made mandatory to be executed in the deployment pipeline. Failure to pass any test cases should reject the deployment.
+○ To many duplicate CSS styling and javascript : This impacts the performance and page loading time.
+○ Minify css and javascript : This is the solution to the previous comment, minification removes unnecessary characters and reduces time, hence improving loading time.
+○ Proper error handling is missing : As a more robust DevSecOps solution and proper logging, alerting and mechanism should be in place for a proactive error/incident management. 
 
 
 ## GETTING STARTED
@@ -46,6 +47,7 @@ What issues can you identify in the given site? What types of improvements would
         ■ Docker image
 
 ### Application Stack - Endless posibilities
+    ○ Elastic Kubernetes Service : Prefered in hybrid cloud or cloud - onpremise solution.
     ○ Serverless Frmaework
     ○ Lambda
     ○ Elasticbeanstalk
