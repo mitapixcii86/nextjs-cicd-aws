@@ -63,3 +63,15 @@ variable "region" {
   description = "The AWS region to create resources in."
   default     = "eu-central-1"
 }
+
+#EC2 instance keyname to generate a key automatically
+variable "key_name" {
+  description = "Enter your key name for EC2 SSH connection "
+  default     = "terraform-ansible"
+}
+
+# SPECIFY AVAILABILITY ZONES AS PER YOUR REQUIREMENT 
+variable "azs" {
+  type    = list(string)
+  default = ["eu-central-1a", "eu-central-1b"]
+}

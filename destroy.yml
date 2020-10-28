@@ -1,0 +1,18 @@
+---
+# destroy all the infrastructure that is created
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    project_dir : "./terraform-ec2"
+  tasks:
+  - name: terraform destroy
+    terraform:
+      binary_path : "/usr/local/bin/terraform"
+      project_path: "{{ project_dir }}"
+      plan_file: "{{ project_dir }}/myplan.tfplan"
+      state: absent
+    register: destroy_result
+
+  - debug:
+       var: destroy_result.stdout_lines

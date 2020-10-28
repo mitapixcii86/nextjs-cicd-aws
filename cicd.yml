@@ -1,0 +1,6 @@
+---
+# Automated Infratructure provisioning 
+- import_playbook: ./terraform-ec2/ci.yml
+
+# Deployment using ansible
+#- import_playbook: app.yml

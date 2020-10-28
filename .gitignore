@@ -17,5 +17,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/terraform/.terraform/
+/terraform-ec2/.terraform/
+/terraform-ecs-ecr/.terraform/
 *.tfstate.*

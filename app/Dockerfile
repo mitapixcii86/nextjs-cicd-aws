@@ -4,11 +4,11 @@
 FROM node:alpine
 
 # create & set working directory
-RUN mkdir -p /usr/src
-WORKDIR /usr/src
+RUN mkdir -p /home/ubuntu
+WORKDIR /home/ubuntu
 
 # copy source files
-COPY . /usr/src
+COPY . /home/ubuntu
 
 # install dependencies
 RUN npm install
