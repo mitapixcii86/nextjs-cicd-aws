@@ -52,6 +52,8 @@ resource "aws_instance" "test_devops" {
   instance_type               = "t2.micro"
   subnet_id                   = element(aws_subnet.private.*.id, count.index)
   key_name                    = aws_key_pair.generated_key.key_name
+  #iam_instance_profile = aws_iam_instance_profile.ec2.name
+  
 
   # references security group created above
   vpc_security_group_ids = [aws_security_group.test_devops_ec2.id]
